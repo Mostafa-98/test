@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Login</title>
+  <link rel="stylesheet" href="./Css/all.min.css">
+  <link rel="stylesheet" href="./Css/bootstrap.min.css">
+  <link rel="stylesheet" href="./Css/style.css">
+</head>
+
+<body>
+
+  <!----------------------- Navbar For Log Out  ----------------------------->
+  <nav class="navbar navbar-expand-lg d-none" id="logOut">
+    <div class="container-fluid">
+      <a class="navbar-brand text-uppercase text-white" href="#">smart login</a>
+      <button class=" navbar-toggler border-1 text-white border-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex" role="search">
+          <button class="btn btn-outline-primary w-100" onclick="logout()" type="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- -----------------------LOGIN PAGE--------------------------------------->
+  <div class="d-block content card text-white text-center w-75 m-auto mt-5 p-3" id="login">
+    <div class="card-body">
+      <h1 class="card-title">Smart Login System</h1>
+      <input class="form-control w-75 m-auto my-4" type="email" id="loginEmail" placeholder="Enter your email">
+      <div id="alertEmail" class="alert alert-danger d-none" role="alert">
+        Please Enter A Valid Email like That "user@example.com"
+      </div>
+      <input class="form-control w-75 m-auto my-4" type="password" id="loginPassword" placeholder="Enter your password">
+
+      <div id="alertPass" class="alert alert-danger d-none" role="alert">
+        Your pass must have at least one lowercase letter , one uppercase letter , one digit and one special character)
+      </div>
+      <button class="btn btn-outline-primary w-75 m-auto" id="loginBtn" onclick="loginPage()">Login</button>
+
+    </div>
+    <div class=" text-white">
+      Don’t have an account? <button id="signupquestion" onclick="signUpQuestion()"
+        class=" btn btn-outline-link text text-white" href="">Sign
+        Up</button>
+    </div>
+  </div>
+
+  <!----------------------------- SIGN UP PAGE ------------------------------ -->
+  <div class=" d-none content card text-white text-center w-75 m-auto mt-5 p-3" id="register">
+    <div class="card-body">
+      <h1 class="card-title">Smart Login System</h1>
+
+
+      <input class=" form-control w-75 m-auto my-4" type="text" name="" id="name" placeholder="Enter your name">
+      <div id="alertName" class="alert alert-danger d-none" role="alert">
+        Please Enter A Valid Name
+      </div>
+
+      <input class="form-control w-75 m-auto my-4" type="email" id="registerEmail" placeholder="Enter your email">
+      <div id="alertEmail" class="alert alert-danger d-none" role="alert">
+        Please Enter A Valid Email like That "user@example.com"
+      </div>
+      <input class="form-control w-75 m-auto my-4" type="password" id="registerPassword"
+        placeholder="Enter your password">
+
+      <div id="alertPass" class="alert alert-danger d-none" role="alert">
+        Your pass must have at least one lowercase letter , one uppercase letter , one digit and one special character)
+      </div>
+
+
+      <button class="btn btn-outline-primary w-75 m-auto" id="signup" onclick="registerPage()">Sign up</button>
+
+
+    </div>
+    <div class=" text-white">
+      You have an account? <button id="signinquestion" onclick="signInQuestion()"
+        class="btn btn-outline-link text-white" href="">Sign
+        in</button>
+    </div>
+  </div>
+
+  <!-- --------------------------WELCOME PAGE --------------------- -->
+
+  <div class="card  d-none d-flex  justify-content-center text-white w-75 m-auto min-vh-100 p-3  text-center" id="welCome">
+    <h1>WellCome</h1>
+    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia ullam in beatae aut doloremque culpa sint
+      eaque quasi unde, autem praesentium nobis delectus. Nulla pariatur placeat dolores eaque perspiciatis ab?</h2>
+  </div>
+
+
+  <script src="./Js/main.js"></script>
+  <script src="./Js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
